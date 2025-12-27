@@ -21,7 +21,7 @@ function! s:delete_ws_line() abort
 
    silent! call repeat#set("\<Plug>DWRepeat", 1)
 endfunction
-nnoremap <silent> <Plug>DWRepeat :<C-u>call DeleteWs()<CR>
+nnoremap <silent> <Plug>DWRepeat :<C-u>call <SID>delete_ws_line()<CR>
 
 function! s:delete_ws_block() abort
    let l:start_col = getcurpos()[2]
