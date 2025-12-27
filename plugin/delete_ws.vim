@@ -2,8 +2,6 @@
 "
 " Copyright 2025, MIT Licensed
 
-echom "Loading delete_ws plugin"
-
 if exists('g:loaded_delete_ws')
     finish
 endif
