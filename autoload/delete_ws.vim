@@ -15,7 +15,7 @@ function! s:DeleteWsLine(start_col)
    endif
 endfunction
 
-function! DeleteWs() abort
+function! delete_ws#line() abort
    let l:start_col = getcurpos()[2]
    call s:DeleteWsLine(l:start_col)
 
@@ -23,7 +23,7 @@ function! DeleteWs() abort
 endfunction
 nnoremap <silent> <Plug>DWRepeat :<C-u>call DeleteWs()<CR>
 
-function! DeleteWsBlock() abort
+function! delete_ws#block() abort
    let l:start_col = getcurpos()[2]
 
    for l:line in range(line("'<"), line("'>"))
@@ -33,5 +33,5 @@ function! DeleteWsBlock() abort
 endfunction
 
 noremap <silent> <expr> d<Space> mode() == "\<C-v>"
-   \ ? ":<C-u>call DeleteWsBlock()<CR>"
-   \ : ":<C-u>call DeleteWs()<CR>"
+   \ ? ":<C-u>call delete_ws#block()<CR>"
+   \ : ":<C-u>call delete_ws#line()<CR>"
