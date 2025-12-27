@@ -1,6 +1,6 @@
 # delete-ws.vim
 
-A simple plugin for vim that allows you to delete the white space to the next word in a line. Works with Tim Pope's [vim-repeat](https://github.com/tpope/vim-repeat) and in visual block mode.
+A simple plugin for Vim that allows you to delete the white space to the next word in a line. Works with Tim Pope's [vim-repeat](https://github.com/tpope/vim-repeat) and in visual block mode.
 
 ## Installation
 
